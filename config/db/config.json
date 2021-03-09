@@ -1,0 +1,15 @@
+{
+    "problemData":{
+        "ip":"localhost",
+        "port":"3306",
+        "userName":"root",
+        "passWorld":"bu0773BUU",
+        "databaseName":"problem_data"
+    },
+    "test":{
+        "ip":"localhost",
+        "port":"3306",
+        "userName":"root",
+        "passworld":"bu0773BUU"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "sourceFileSuffix":{
+        "c":".c",
+        "c++":".cpp"
+    },
+    "complierName":{
+        "c":"gcc",
+        "c++":"g++"
+    }
+
+}
