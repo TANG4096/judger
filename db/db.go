@@ -19,7 +19,6 @@ func init() {
 	passworld := dbConfigMap["passworld"]
 	ip := dbConfigMap["ip"]
 	port := dbConfigMap["port"]
-
 	arg := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", user, passworld, ip, port, "test")
 	log.Println(arg)
 	var err error

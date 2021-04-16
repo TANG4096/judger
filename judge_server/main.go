@@ -23,7 +23,7 @@ func main() {
 	//开始注册
 	go func() {
 		for {
-			etcdRegister.Register(register_center.ServiceDescInfo{ServiceName: "HelloService",
+			etcdRegister.Register(register_center.ServiceDescInfo{ServiceName: "JudgeService",
 				Host: "127.0.0.1", Port: 8090, IntervalTime: time.Duration(10)})
 
 			time.Sleep(time.Second * 5)
@@ -32,7 +32,7 @@ func main() {
 	//创建一个grpc服务器对象
 	gRpcServer := grpc.NewServer()
 	pb.RegisterHelloServiceServer(gRpcServer, &impl.HelloServiceServer{})
-
+	pb.RegisterJudgeServiceServer(gRpcServer, &impl.JudgeServiceServer{})
 	//开启服务端
 	gRpcServer.Serve(lis)
 }

@@ -1,48 +1,28 @@
 package util
 
 import (
-	"fmt"
-	"log"
-	"runtime/debug"
+	"time"
+
+	"github.com/sta-golang/go-lib-utils/log"
 )
 
 func init() {
-	/*dir := GetPath()
-	logFile, err := os.Open(dir + "/log/judger.log")
-	if err != nil {
-		log.Fatal(err)
+
+	//---------------------------
+	alone := []string{log.GetLevelName(log.INFO), log.GetLevelName(log.ERROR)}
+	logConfig := &log.FileLogConfig{
+		FileDir:     GetPath() + "/log/judge_server",
+		FileName:    "judge_server",
+		DayAge:      7,
+		LogLevel:    log.INFO,
+		MaxSize:     0,
+		AloneWriter: alone,
+		Prefix:      "judger",
 	}
-	log.SetOutput(logFile)*/
+	logger := log.NewFileLogAndAsync(logConfig, time.Second*3)
+	log.SetGlobalLogger(logger)
 }
 
-func LogFatalln(v ...interface{}) {
-	v = append(v, fmt.Sprintf("\n%s", debug.Stack()))
-	log.Fatalln(v)
-}
-
-func LogFatalf(format string, v ...interface{}) {
-	format += "\n%s\n"
-	v = append(v, debug.Stack())
-	log.Fatalf(format, v)
-}
-
-func LogPanicln(v ...interface{}) {
-	v = append(v, fmt.Sprintf("\n%s", debug.Stack()))
-	log.Panicln(v)
-}
-
-func LogPanicf(format string, v ...interface{}) {
-	format += "\n%s\n"
-	v = append(v, debug.Stack())
-	log.Panicf(format, v)
-}
-func LogPrintln(v ...interface{}) {
-	v = append(v, fmt.Sprintf("\n%s", debug.Stack()))
-	log.Println(v)
-}
-
-func LogPrintf(format string, v ...interface{}) {
-	format += "\n%s\n"
-	v = append(v, debug.Stack())
-	log.Println(format, v)
+func LogErr(err error) {
+	log.Errorf("err: %v", err)
 }

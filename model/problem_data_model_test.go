@@ -2,7 +2,9 @@ package model_test
 
 import (
 	"fmt"
+	"judger/db"
 	"judger/model"
+	"log"
 	"testing"
 
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -18,9 +20,13 @@ func TestProblemDataInsert(t *testing.T) {
 		Name:        "a+b",
 		TimeLimit:   2000,
 		MemoryLimit: 512 * (1 << (20)),
-		JudgerID:    0,
+		JudgerID:    1,
 	}
 	data.Insert()
-	res := model.ProblemData{Name: "a+b"}
+	res := model.ProblemData{}
+	err := db.GetDB().Find(&model.ProblemData{Name: "a+b"}).First(&res).Error
+	if err != nil {
+		log.Println(err.Error())
+	}
 	fmt.Printf("%v", res)
 }

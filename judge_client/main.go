@@ -3,10 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
 	"judger/pb"
 	"judger/register_center"
+	"judger/util"
 	"log"
-	"strconv"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/balancer/roundrobin"
@@ -14,42 +15,42 @@ import (
 
 func main() {
 	//连接etcd,得到名命名空间
-	schema, err := register_center.GenerateAndRegisterEtcdResolver("127.0.0.1:2379", "HelloService")
+	schema, err := register_center.GenerateAndRegisterEtcdResolver("127.0.0.1:2379", "JudgeService")
 	if err != nil {
 		log.Fatal("init etcd resolver err:", err.Error())
 	}
-	conn, err := grpc.Dial(fmt.Sprintf("%s:///HelloService", schema), grpc.WithInsecure(), grpc.WithBalancerName(roundrobin.Name))
+	conn, err := grpc.Dial(fmt.Sprintf("%s:///JudgeService", schema), grpc.WithInsecure(), grpc.WithBalancerName(roundrobin.Name))
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+	fmt.Println(1)
 	//创建客户端存根对象
 	c := pb.NewHelloServiceClient(conn)
-	//客户端发起调用，返回一个流
-	r, err := c.HelloWorldClientAndServerStream(context.Background(), grpc.EmptyCallOption{})
+	fmt.Println(2)
+	res, err := c.HelloWorld(context.Background(), &pb.HelloRequest{Request: "122332"})
 	if err != nil {
-		log.Fatalf("%v", err)
+		fmt.Println(err.Error())
 		return
 	}
-	//用流给服务端发送消息
-	for i := 0; i < 10; i++ {
-		r.Send(&pb.HelloRequest{Request: "my is golang gRpc client " + strconv.Itoa(i)})
+	fmt.Printf("result:%v\n", res.Response)
+	c2 := pb.NewJudgeServiceClient(conn)
+	req := &pb.JudgeRequest{
+		ProblemID: 3,
+		Type:      "c++",
+		IsUpdate:  false,
 	}
-	//流关闭
-	r.CloseSend()
-
-	//接受服务端返回的消息
-	for {
-		res, err := r.Recv()
-		if err != nil && err.Error() == "EOF" {
-			break
-		}
-		if err != nil {
-			log.Fatalf("%v", err)
-			break
-		}
-		log.Printf("result:%v", res.Response)
-		fmt.Printf("result:%v", res.Response)
+	path := util.GetPath() + "/temp_data/test/"
+	sourceFile, err := ioutil.ReadFile(path + "a.cpp")
+	if err != nil {
+		fmt.Println(err)
 	}
+	req.SourceCode = sourceFile
+	res2, err := c2.Judge(context.Background(), req)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	fmt.Printf("result:%v\n", res2.Response)
 	defer conn.Close()
 }

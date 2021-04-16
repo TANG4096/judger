@@ -2,7 +2,6 @@ package model
 
 import (
 	"judger/db"
-	"judger/util"
 
 	"github.com/jinzhu/gorm"
 )
@@ -27,7 +26,6 @@ func init() {
 func (data *ProblemData) GetLimit() (err error) {
 	db := db.GetDB()
 	if err = db.Where(data, "time_limit", "memory_limit", "judger_id").First(&data).Error; err != nil {
-		util.LogPrintln(err)
 		return err
 	}
 	return nil
