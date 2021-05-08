@@ -3,14 +3,14 @@ package model
 import (
 	"judger/db"
 
-	"github.com/jinzhu/gorm"
+	"gorm.io/gorm"
 )
 
 type ProblemTestData struct {
 	gorm.Model
-	ProblemID uint   `gorm: "index"`
-	Input     []byte `gorm: "NOT_NULL";`
-	Ans       []byte `gorm: "NOT_NULL"`
+	ProblemID uint   `gorm:"index"`
+	Input     []byte `gorm:"NOT_NULL"`
+	Ans       []byte `gorm:"NOT_NULL"`
 }
 
 func init() {
@@ -28,4 +28,12 @@ func GetTestDataList(problemID uint) (dataList []ProblemTestData, err error) {
 
 func (data *ProblemTestData) Insert() error {
 	return db.GetDB().Create(data).Error
+}
+
+func GetSample(problemID uint) (dataList []ProblemTestData, err error) {
+	db := db.GetDB()
+	if err = db.Where(&ProblemTestData{ProblemID: problemID}).Limit(2).Find(&dataList).Error; err != nil {
+		return nil, err
+	}
+	return dataList, err
 }

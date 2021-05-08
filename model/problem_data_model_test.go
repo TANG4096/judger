@@ -2,12 +2,11 @@ package model_test
 
 import (
 	"fmt"
-	"judger/db"
 	"judger/model"
 	"log"
 	"testing"
 
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "gorm.io/driver/mysql"
 )
 
 func TestInit(t *testing.T) {
@@ -18,15 +17,27 @@ func TestInit(t *testing.T) {
 func TestProblemDataInsert(t *testing.T) {
 	data := model.ProblemData{
 		Name:        "a+b",
-		TimeLimit:   2000,
+		TimeLimit:   2,
 		MemoryLimit: 512 * (1 << (20)),
-		JudgerID:    1,
+		JudgerID:    0,
+		Author:      "ty",
+		Content:     ("输入a和b输出两个数字的和\n"),
+		Input:       ("第一行一个整数n,表示数据组数，后面n行每行是要求和的两个数\n"),
+		Output:      ("输出和，每行一个整数\n"),
 	}
 	data.Insert()
-	res := model.ProblemData{}
-	err := db.GetDB().Find(&model.ProblemData{Name: "a+b"}).First(&res).Error
+	list, err := model.GetProblemList(10, 0, 1)
 	if err != nil {
 		log.Println(err.Error())
 	}
-	fmt.Printf("%v", res)
+	fmt.Printf("%v", list)
+}
+
+func TestGetproblemCount(t *testing.T) {
+	cnt, err := model.GetProbemCount()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(cnt)
 }

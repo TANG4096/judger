@@ -26,18 +26,10 @@ func main() {
 	}
 	fmt.Println(1)
 	//创建客户端存根对象
-	c := pb.NewHelloServiceClient(conn)
-	fmt.Println(2)
-	res, err := c.HelloWorld(context.Background(), &pb.HelloRequest{Request: "122332"})
-	if err != nil {
-		fmt.Println(err.Error())
-		return
-	}
-	fmt.Printf("result:%v\n", res.Response)
 	c2 := pb.NewJudgeServiceClient(conn)
 	req := &pb.JudgeRequest{
 		ProblemID: 3,
-		Type:      "c++",
+		Type:      "C++",
 		IsUpdate:  false,
 	}
 	path := util.GetPath() + "/temp_data/test/"

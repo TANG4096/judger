@@ -19,8 +19,8 @@ func init() {
 		AloneWriter: alone,
 		Prefix:      "judger",
 	}
-	logger := log.NewFileLogAndAsync(logConfig, time.Second*3)
-	log.SetGlobalLogger(logger)
+	Logger := log.NewFileLogAndAsync(logConfig, time.Second*3)
+	log.SetGlobalLogger(Logger)
 }
 
 func LogErr(err error) {

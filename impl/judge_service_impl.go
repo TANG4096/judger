@@ -52,6 +52,7 @@ func (ju *JudgeServiceServer) Judge(ctx context.Context, req *pb.JudgeRequest) (
 	if err != nil {
 		return nil, err
 	}
+
 	return &pb.JudgeResponse{Response: *result}, err
 }
 
@@ -60,11 +61,11 @@ func (ju *JudgeServiceServer) JudgeClientAndServerStream(ctx context.Context, re
 	return res, err
 }
 
-func GetTestDataList(problemID uint, isUpdate bool) ([]model.ProblemTestData, error) {
+func GetTestDataList(problemID uint, isUpdate bool) (testData []model.ProblemTestData, err error) {
 	cache := cache.GetTestDataCache()
-	testData := cache.Get(problemID)
+	testData = cache.Get(problemID)
 	if isUpdate || len(testData) == 0 {
-		testData, err := model.GetTestDataList(problemID)
+		testData, err = model.GetTestDataList(problemID)
 		if err != nil {
 			return nil, err
 		}
@@ -75,9 +76,9 @@ func GetTestDataList(problemID uint, isUpdate bool) ([]model.ProblemTestData, er
 
 func Compile(ctx context.Context, codeText []byte, Type, path, fileName string) error {
 	switch Type {
-	case "python":
+	case "Python":
 
-	case "c", "c++":
+	case "C", "C++":
 		suffixMap := util.GetConfigMap("sourceFileSuffix")
 		suffix := suffixMap[Type]
 		fileName = path + "/temp_data/" + fileName
@@ -91,7 +92,7 @@ func Compile(ctx context.Context, codeText []byte, Type, path, fileName string) 
 		out, err := cmd.CombinedOutput()
 		if err != nil {
 			if len(out) != 0 {
-				return errors.New("compile error")
+				return errors.New("Compile Error")
 			}
 			return err
 		}
@@ -104,7 +105,9 @@ func Compile(ctx context.Context, codeText []byte, Type, path, fileName string) 
 
 func Run(ctx context.Context, dir, fileName string, testDataList []model.ProblemTestData, TimeLimit, MemoryLimit, judgerID uint) (res *string, err error) {
 	var ans string
+	fmt.Println(testDataList)
 	for caseID, testData := range testDataList {
+		fmt.Println("test case: ", caseID)
 		outFile, err := ioutil.TempFile(dir, "out")
 		if err != nil {
 			return nil, err
@@ -168,43 +171,44 @@ func Run(ctx context.Context, dir, fileName string, testDataList []model.Problem
 
 			code := syscall.Signal(ps.ExitCode())
 			if code != 0 {
+				log.Infof("code: %d\n", ps.ExitCode())
 				fmt.Println("code: ", ps.ExitCode())
 				switch code {
 				case syscall.SIGSEGV:
-					ans = "segment error"
+					ans = "Memory Limit Exceeded"
 				case syscall.SIGKILL:
-					ans = "time limit error"
+					ans = "Time Limit Exceeded"
 				case syscall.SIGUSR1:
-					ans = "run time error"
+					ans = "Runtime Rrror"
 				}
-				break
+				return &ans, nil
 			} else {
+				fmt.Println(judgerID)
 				if judgerID == 0 {
 					stat, err := outFile.Stat()
 					if err != nil {
 						return nil, err
 					}
-					fmt.Println("outfile size: ", stat.Size())
+					log.Infof("outfile size: %d", stat.Size())
 					out, err := ioutil.ReadFile(outFile.Name())
 					if err != nil {
 						return nil, err
 					}
 					log.Infof("Problem %d case %d output %d bytes", testData.ProblemID, caseID+1, len(out))
-					fmt.Println(out)
-					fmt.Println(testData.Ans)
+					fmt.Println("out: ", out)
+					fmt.Println("ans: ", testData.Ans)
 					if !bytes.Equal(out, testData.Ans) {
-						ans = "wrong answer"
-						break
+						ans = "Wrong Answer"
+						return &ans, nil
 					}
 				} else {
+
 					//TODO special judger
 				}
 			}
 			os.Remove(outFile.Name())
 		}
 	}
-	if ans == "" {
-		ans = "accept"
-	}
+	ans = "accept"
 	return &ans, nil
 }

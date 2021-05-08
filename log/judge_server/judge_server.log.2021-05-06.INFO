@@ -1,0 +1,85 @@
+judger 2021-05-06 22:06:53 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     150.878µs |    117.32.216.1 | GET | /problemtag/ |
+judger 2021-05-06 22:06:53 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |   20.106818ms |    117.32.216.1 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-06 22:06:59 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     944.002µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:07:00 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |    4.521785ms |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:07:52 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     937.467µs |    117.32.216.1 | POST | /login |
+judger 2021-05-06 22:09:00 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 404 |         104ns |     65.49.20.68 | GET | / |
+judger 2021-05-06 22:12:48 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"undefined","problemID":1,"result":-1,"time":0,"memory":0,"length":132,"language":"C++","submittime":"2021/5/6","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:13:12 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      187.94µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:13:12 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |    1.249068ms |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:13:12 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     953.655µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:13:46 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     200.197µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:13:46 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |    1.151237ms |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:13:46 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     959.298µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:15:29 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"undefined","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"c++","submittime":"2021/5/6","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:16:57 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     944.732µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:16:57 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     830.658µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:17:51 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 404 |          96ns |    117.32.216.1 | GET | /logout/ |
+judger 2021-05-06 22:17:56 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      55.056µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:17:56 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     806.954µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:17:56 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     877.711µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:18:58 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      72.962µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:18:58 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     759.019µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:18:58 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      825.44µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:19:13 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-06 22:19:13 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     939.475µs |    117.32.216.1 | POST | /login |
+judger 2021-05-06 22:21:41 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |       54.91µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:21:42 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     791.179µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:21:42 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     850.659µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:21:55 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      45.026µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:21:55 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      751.05µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:21:55 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |    1.380942ms |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:22:05 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-06 22:22:05 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     857.752µs |    117.32.216.1 | POST | /login |
+judger 2021-05-06 22:22:11 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      40.083µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:22:11 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     770.286µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:22:11 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     858.582µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:22:44 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"undefined","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"C++","submittime":"2021/5/6","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:26:44 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      45.614µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:26:45 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     765.148µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:26:45 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     850.431µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:26:51 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-06 22:26:51 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      874.45µs |    117.32.216.1 | POST | /login |
+judger 2021-05-06 22:28:18 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      44.764µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:28:18 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     860.205µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:28:19 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     854.177µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:28:25 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-06 22:28:25 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     892.804µs |    117.32.216.1 | POST | /login |
+judger 2021-05-06 22:29:02 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"1","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"C++","submittime":"2021/5/6","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:33:44 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     799.351µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:33:44 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     836.774µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:33:57 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"1","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"c++","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:34:26 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      159.86µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:34:27 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |    1.210536ms |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:34:27 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     1.00885ms |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:34:38 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"1","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"C++","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:37:27 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     916.495µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:37:27 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     909.524µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:39:18 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     758.184µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:39:18 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     807.057µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:39:22 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      79.857µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:39:22 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     769.632µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:39:23 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      846.24µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:39:42 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"1","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"c++","submittime":"1620311982224","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:39:42 [INFO] /ty/go/judger/task/submit_task.go:57 ==> add submittask uid: 1 problemID 1 taskQueueSize: 1
+
+judger 2021-05-06 22:39:42 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     342.519µs |    117.32.216.1 | POST | /submit/ |
+judger 2021-05-06 22:40:29 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     790.727µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:40:29 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     795.604µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:40:39 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      52.773µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:40:39 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     726.497µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:40:40 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     834.983µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:41:07 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"1","problemID":"1","result":-1,"time":0,"memory":0,"length":132,"language":"c++","submittime":"1620312067519","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    cin >> a >> b;\n    cout << a+b << endl;\n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-06 22:41:07 [INFO] /ty/go/judger/task/submit_task.go:57 ==> add submittask uid: 1 problemID 1 taskQueueSize: 1
+
+judger 2021-05-06 22:41:07 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     267.185µs |    117.32.216.1 | POST | /submit/ |
+judger 2021-05-06 22:41:53 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     749.719µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:41:53 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     812.385µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:42:23 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      39.585µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:42:24 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     759.264µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:42:24 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |    1.098118ms |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 22:56:33 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |      55.966µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-06 22:56:34 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     807.774µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-06 22:56:34 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 200 |     877.168µs |    117.32.216.1 | GET | /sample/?id=1 |
+judger 2021-05-06 23:33:14 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 404 |         104ns |   201.92.94.161 | GET | / |
+judger 2021-05-06 23:56:03 [INFO] /ty/go/judger/web_server/main.go:52 ==> | 404 |         103ns |  47.241.125.249 | GET | http://passport.baidu.com/ |

@@ -5,9 +5,10 @@ import (
 	"judger/util"
 	"log"
 
-	"github.com/jinzhu/gorm"
+	"gorm.io/gorm"
 
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/driver/mysql"
+	_ "gorm.io/driver/mysql"
 )
 
 var db *gorm.DB
@@ -22,7 +23,7 @@ func init() {
 	arg := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", user, passworld, ip, port, "test")
 	log.Println(arg)
 	var err error
-	db, err = gorm.Open("mysql", arg)
+	db, err = gorm.Open(mysql.Open(arg), &gorm.Config{})
 	//log.Printf("%v", db)
 	if err != nil {
 		log.Fatalf("%s", err.Error())
@@ -31,10 +32,5 @@ func init() {
 }
 
 func GetDB() *gorm.DB {
-	err := db.DB().Ping()
-	if err != nil {
-		log.Panicln(err.Error())
-		db.Close()
-	}
 	return db
 }

@@ -47,7 +47,7 @@ func TestCompile(t *testing.T) {
 	}
 	//log.Printf("\n%s\n", codeText)
 
-	err = impl.Compile(context.Background(), codeText, "c", path, "233323")
+	err = impl.Compile(context.Background(), codeText, "C", path, "233323")
 	if err != nil {
 		log.Println(err.Error())
 	} else {
@@ -77,4 +77,13 @@ func TestRun(t *testing.T) {
 	}
 	fmt.Println(*res)
 	time.Sleep(3 * time.Second)
+}
+
+func TestGetTestDataList(t *testing.T) {
+	list, err := impl.GetTestDataList(3, false)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(list)
 }

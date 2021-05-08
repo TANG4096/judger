@@ -10,13 +10,13 @@ type TestDataCache struct {
 	mutex sync.RWMutex
 }
 
-var cache *TestDataCache
+var testDataCache *TestDataCache
 
 func GetTestDataCache() *TestDataCache {
-	if cache == nil {
-		cache = &TestDataCache{data: make(map[uint][]model.ProblemTestData)}
+	if testDataCache == nil {
+		testDataCache = &TestDataCache{data: make(map[uint][]model.ProblemTestData)}
 	}
-	return cache
+	return testDataCache
 }
 
 func (cache *TestDataCache) Get(problemID uint) []model.ProblemTestData {

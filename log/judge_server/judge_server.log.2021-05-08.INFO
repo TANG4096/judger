@@ -1,0 +1,94 @@
+judger 2021-05-08 00:16:16 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         101ns |    72.45.42.226 | GET | / |
+judger 2021-05-08 01:32:08 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          98ns |  192.241.221.47 | GET | /manager/text/list |
+judger 2021-05-08 01:35:30 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          96ns |   91.227.191.70 | GET | / |
+judger 2021-05-08 01:46:10 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          99ns |     80.82.78.39 | GET | / |
+judger 2021-05-08 01:46:57 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         101ns |     80.82.78.39 | GET | /b.tar.bz2 |
+judger 2021-05-08 01:47:16 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          97ns |     80.82.78.39 | GET | /c.tar.bz2 |
+judger 2021-05-08 01:48:12 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          97ns |     80.82.78.39 | GET | /e.tar.bz2 |
+judger 2021-05-08 01:48:25 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         102ns |     80.82.78.39 | GET | /f.tar.bz2 |
+judger 2021-05-08 01:50:46 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         129ns |     80.82.78.39 | GET | /j.tar.bz2 |
+judger 2021-05-08 01:51:47 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         104ns |     80.82.78.39 | GET | /m.tar.bz2 |
+judger 2021-05-08 01:51:57 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         103ns |     80.82.78.39 | GET | /n.tar.bz2 |
+judger 2021-05-08 01:52:07 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         101ns |     80.82.78.39 | GET | /o.tar.bz2 |
+judger 2021-05-08 01:52:59 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         101ns |     80.82.78.39 | GET | /s.tar.bz2 |
+judger 2021-05-08 01:53:13 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          98ns |     80.82.78.39 | GET | /t.tar.bz2 |
+judger 2021-05-08 01:53:23 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         101ns |     80.82.78.39 | GET | /u.tar.bz2 |
+judger 2021-05-08 01:53:51 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         122ns |     80.82.78.39 | GET | /w.tar.bz2 |
+judger 2021-05-08 01:54:05 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         102ns |    40.71.59.118 | GET | /.env |
+judger 2021-05-08 01:54:06 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          95ns |    40.71.59.118 | POST | / |
+judger 2021-05-08 01:54:25 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          97ns |     80.82.78.39 | GET | /y.tar.bz2 |
+judger 2021-05-08 01:54:41 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          94ns |     80.82.78.39 | GET | /z.tar.bz2 |
+judger 2021-05-08 01:55:02 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          91ns |     80.82.78.39 | GET | /0.tar.bz2 |
+judger 2021-05-08 01:55:12 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          97ns |     80.82.78.39 | GET | /1.tar.bz2 |
+judger 2021-05-08 01:55:33 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          97ns |     80.82.78.39 | GET | /3.tar.bz2 |
+judger 2021-05-08 01:56:01 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         103ns |     80.82.78.39 | GET | /5.tar.bz2 |
+judger 2021-05-08 01:56:49 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         144ns |     80.82.78.39 | GET | /8.tar.bz2 |
+judger 2021-05-08 08:57:34 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-08 08:57:34 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    7.267841ms |  117.136.87.205 | POST | /login |
+judger 2021-05-08 08:57:43 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      90.634µs |  117.136.87.205 | GET | /settingboard/ |
+judger 2021-05-08 08:57:49 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         100ns |  117.136.87.205 | GET | /logout/ |
+judger 2021-05-08 08:58:05 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      71.989µs |  117.136.87.205 | GET | /settingboard/ |
+judger 2021-05-08 09:00:52 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      53.748µs |  117.136.87.205 | GET | /settingboard/ |
+judger 2021-05-08 09:03:03 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      74.349µs |  117.136.87.205 | GET | /problemtag/ |
+judger 2021-05-08 09:03:03 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    3.755456ms |  117.136.87.205 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 09:03:06 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    1.360295ms |  117.136.87.205 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 09:03:06 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      58.694µs |  117.136.87.205 | GET | /problemtag/ |
+judger 2021-05-08 09:03:58 [INFO] /ty/go/judger/impl/judge_service_impl.go:39 ==> 3_0_1620435836 compile complete
+judger 2021-05-08 09:03:58 [INFO] /ty/go/judger/impl/judge_service_impl.go:192 ==> outfile size: 4
+judger 2021-05-08 09:03:58 [INFO] /ty/go/judger/impl/judge_service_impl.go:197 ==> Problem 3 case 1 output 4 bytes
+judger 2021-05-08 09:03:58 [INFO] /ty/go/judger/impl/judge_service_impl.go:192 ==> outfile size: 4
+judger 2021-05-08 09:03:58 [INFO] /ty/go/judger/impl/judge_service_impl.go:197 ==> Problem 3 case 2 output 4 bytes
+judger 2021-05-08 09:16:34 [INFO] /ty/go/judger/impl/judge_service_impl.go:39 ==> 3_0_1620436594 compile complete
+judger 2021-05-08 09:16:34 [INFO] /ty/go/judger/impl/judge_service_impl.go:192 ==> outfile size: 4
+judger 2021-05-08 09:16:34 [INFO] /ty/go/judger/impl/judge_service_impl.go:197 ==> Problem 3 case 1 output 4 bytes
+judger 2021-05-08 09:16:34 [INFO] /ty/go/judger/impl/judge_service_impl.go:192 ==> outfile size: 4
+judger 2021-05-08 09:16:34 [INFO] /ty/go/judger/impl/judge_service_impl.go:197 ==> Problem 3 case 2 output 4 bytes
+judger 2021-05-08 09:19:24 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     185.085µs |  117.136.87.205 | GET | /settingboard/ |
+judger 2021-05-08 09:19:24 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    1.703827ms |  117.136.87.205 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 09:19:24 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      80.292µs |  117.136.87.205 | GET | /problemtag/ |
+judger 2021-05-08 09:19:31 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     880.782µs |  117.136.87.205 | GET | /problem/?id=1 |
+judger 2021-05-08 09:19:31 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    1.225999ms |  117.136.87.205 | GET | /sample/?id=1 |
+judger 2021-05-08 09:21:02 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     112.833µs |  117.136.87.205 | GET | /problemtag/ |
+judger 2021-05-08 09:21:02 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    2.601361ms |  117.136.87.205 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 09:22:12 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     758.029µs |  117.136.87.205 | GET | /problem/?id=1 |
+judger 2021-05-08 09:22:12 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     866.977µs |  117.136.87.205 | GET | /sample/?id=1 |
+judger 2021-05-08 10:00:01 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         106ns |  89.248.165.182 | GET | /level/15/exec/-/sh/run/CR |
+judger 2021-05-08 10:04:08 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          91ns |  45.155.126.230 | GET | / |
+judger 2021-05-08 10:08:47 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         103ns |  168.121.56.171 | GET | / |
+judger 2021-05-08 10:16:18 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         117ns |  104.198.187.86 | GET | /login |
+judger 2021-05-08 10:16:18 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          91ns |  104.198.187.86 | GET | /jenkins/login |
+judger 2021-05-08 10:19:55 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         101ns |    128.1.248.26 | GET | / |
+judger 2021-05-08 11:16:25 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |          87ns |   139.59.152.69 | GET | / |
+judger 2021-05-08 11:21:19 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         140ns |   139.59.152.69 | GET | /_ignition/execute-solution |
+judger 2021-05-08 12:20:55 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         116ns |    64.227.3.111 | POST | /boaform/admin/formLogin |
+judger 2021-05-08 16:12:43 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     166.683µs |    117.32.216.1 | GET | /problemtag/ |
+judger 2021-05-08 16:12:43 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    9.612481ms |    117.32.216.1 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 16:12:52 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-08 16:12:52 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     1.02739ms |    117.32.216.1 | POST | /login |
+judger 2021-05-08 16:12:56 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     890.008µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 16:12:56 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    4.888182ms |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 16:17:02 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     778.414µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 16:17:02 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      878.49µs |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 16:17:57 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      760.68µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 16:17:57 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     864.779µs |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 16:18:04 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     807.141µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 16:18:04 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     904.691µs |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 16:54:44 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      82.386µs |    117.32.216.1 | GET | /problemtag/ |
+judger 2021-05-08 16:54:44 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     1.37714ms |    117.32.216.1 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 16:54:55 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    1.278441ms |    117.32.216.1 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 16:54:55 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      60.196µs |    117.32.216.1 | GET | /problemtag/ |
+judger 2021-05-08 16:54:58 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    1.269007ms |    117.32.216.1 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-08 16:54:58 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      40.004µs |    117.32.216.1 | GET | /problemtag/ |
+judger 2021-05-08 17:35:30 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         114ns | 180.149.125.175 | GET | / |
+judger 2021-05-08 17:49:50 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         119ns |  184.105.139.68 | GET | / |
+judger 2021-05-08 19:41:45 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |  289.989394ms |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 19:41:45 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    3.381327ms |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 19:41:51 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-08 19:41:51 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |    1.170484ms |    117.32.216.1 | POST | /login |
+judger 2021-05-08 19:41:57 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     100.173µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-08 19:41:58 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     742.582µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 19:41:58 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     849.968µs |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 19:42:34 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |      50.439µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-08 19:42:35 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     758.839µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-08 19:42:35 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 200 |     870.662µs |    117.32.216.1 | GET | /sample/?id=3 |
+judger 2021-05-08 20:12:11 [INFO] /ty/go/judger/web_server/main.go:53 ==> | 404 |         115ns |  193.118.53.194 | GET | / |
