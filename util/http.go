@@ -47,6 +47,17 @@ func Query2Int(c *gin.Context, key string) int {
 	return an
 }
 
+func GetQuery2Int(c *gin.Context, key string) (ans int, ob bool) {
+	s, ok := c.GetQuery(key)
+	if ok {
+		an, _ := strconv.Atoi(s)
+		return an, true
+	} else {
+		return 0, ok
+	}
+
+}
+
 func Query2Uint(c *gin.Context, key string) uint {
 	an, _ := strconv.Atoi(c.Query(key))
 	return uint(an)

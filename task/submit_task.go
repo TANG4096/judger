@@ -3,6 +3,7 @@ package task
 import (
 	"fmt"
 	"judger/cache"
+	"judger/model"
 	"judger/pb"
 	"judger/service"
 	"runtime"
@@ -36,12 +37,7 @@ func (t *SubmitTask) Run() {
 			t.pool.Submit(func() error {
 				param := res.(*SubmitParam)
 				log.Infof("submit %s is run", param.key)
-				ans, err := service.Judge(param.req)
-				if err != nil {
-					log.Error(err)
-					return err
-				}
-				cache.GetJudgeResuCache().Update(param.key, *ans)
+
 				return nil
 			})
 		} else {
@@ -50,7 +46,7 @@ func (t *SubmitTask) Run() {
 	}
 }
 
-func (t *SubmitTask) AddTask(key string, req *pb.JudgeRequest) error {
+func (t *SubmitTask) AddTask(userName, key string, req *pb.JudgeRequest) error {
 	err := t.pool.Submit(func() error {
 		log.Infof("submit %s is run", key)
 		ans, err := service.Judge(req)
@@ -58,8 +54,18 @@ func (t *SubmitTask) AddTask(key string, req *pb.JudgeRequest) error {
 			log.Error(err)
 			return err
 		}
-		cache.GetJudgeResuCache().Update(key, *ans)
-
+		data := model.JudgeStatusData{
+			Key:       key,
+			Uid:       int(req.UserID),
+			ProblemID: int(req.ProblemID),
+			Result:    *ans,
+			Language:  req.Type,
+		}
+		cache.GetJudgeResuCache().Update(key, &data)
+		err = data.Insert()
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 	if err != nil {

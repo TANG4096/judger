@@ -16,14 +16,11 @@ func TestInit(t *testing.T) {
 
 func TestProblemDataInsert(t *testing.T) {
 	data := model.ProblemData{
-		Name:        "a+b",
+		Name:        "异或加密",
 		TimeLimit:   2,
 		MemoryLimit: 512 * (1 << (20)),
 		JudgerID:    0,
 		Author:      "ty",
-		Content:     ("输入a和b输出两个数字的和\n"),
-		Input:       ("第一行一个整数n,表示数据组数，后面n行每行是要求和的两个数\n"),
-		Output:      ("输出和，每行一个整数\n"),
 	}
 	data.Insert()
 	list, err := model.GetProblemList(10, 0, 1)

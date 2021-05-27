@@ -2,6 +2,7 @@ package model_test
 
 import (
 	"fmt"
+	"judger/db"
 	"judger/model"
 	"testing"
 
@@ -25,6 +26,21 @@ func TestGetUserDataByUserName(t *testing.T) {
 	data, err := model.GetUserDataByUserName("")
 	if err != nil {
 		fmt.Println("err： ", err)
+		return
+	}
+	fmt.Printf("%v", data)
+}
+
+func TestGetUpdatae(t *testing.T) {
+	temp := &model.UserData{
+		UserName: "test",
+	}
+	data := &model.UserData{
+		Type: "3",
+	}
+	err := db.GetDB().Model(&model.UserData{}).Where(temp).Updates(data).Error
+	if err != nil {
+		fmt.Println(err.Error())
 		return
 	}
 	fmt.Printf("%v", data)

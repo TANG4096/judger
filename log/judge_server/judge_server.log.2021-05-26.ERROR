@@ -1,0 +1,3 @@
+judger 2021-05-26 21:15:07 [ERROR] /ty/go/judger/controller/contest_controller.go:38 ==> parsing time "2021-05-26T13:14:45.422Z" as "2006-01-02 15:04:05": cannot parse "T13:14:45.422Z" as " "
+judger 2021-05-26 21:24:22 [ERROR] /ty/go/judger/controller/contest_controller.go:60 ==> Error 1054: Unknown column 'last_time' in 'field list'
+judger 2021-05-26 21:29:22 [ERROR] /ty/go/judger/controller/contest_controller.go:60 ==> Error 1146: Table 'test.contests' doesn't exist

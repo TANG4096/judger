@@ -19,15 +19,23 @@ func register(r *gin.Engine) *gin.Engine {
 	r.POST("/register", controller.Register)
 	r.POST("/login", controller.Login)
 	r.POST("/userdata/", controller.UserData)
-
 	r.GET("/problem/", controller.Problem)
-	r.GET("/problemdata/", controller.ProblemData)
+	r.GET("/problemdata/", controller.ProblemDataList)
 	r.GET("/problemtag/", controller.ProblemTagList)
 	r.GET("/sample/", controller.GetSample)
 	r.POST("/submit/", controller.Submit)
 	r.GET("/judgestatus/", controller.Judgestatus)
+	r.GET("/judgestatuslist/", controller.JudgestatusList)
 	r.GET("/judgestatuscode/", controller.JudgestatusCode)
 	r.GET("/settingboard/", controller.SettingBoard)
+	r.GET("/statusdatalist/", controller.StatusDataList)
+	r.GET("/contestlist/", controller.GetContestList)
+	r.POST("/addcontest/", controller.AddContest)
+	r.POST("/addcontestproblem/", controller.AddContestProblem)
+	r.GET("/currenttime/", controller.CurrentTime)
+	r.GET("/contestinfo/", controller.ContestInfo)
+	r.GET("/contestannouncement/", controller.ContestAnnouncement)
+	r.GET("/contestregister/",controller.ContestRegister)
 	return r
 }
 

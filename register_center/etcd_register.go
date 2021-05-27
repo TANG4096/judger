@@ -51,7 +51,7 @@ func (etcd *etcdRegisterImpl) Register(info ServiceDescInfo) error {
 			return err
 		}
 	}
-	log.Println("register successful")
+	//log.Println("register successful")
 	return nil
 }
 

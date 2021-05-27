@@ -12,15 +12,17 @@ func TestPoblemTestDataInsert(t *testing.T) {
 		Input:     []byte("2\n2 2\n2 3\n"),
 		Ans:       []byte("4\n5\n"),
 	}
+	fmt.Printf("插入数据为：\n%v\n", data)
 	err := data.Insert()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
+	fmt.Println("数据插入成功")
 	dataList, err := model.GetTestDataList(3)
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-	fmt.Printf("%v\n%s\n%s\n", dataList, dataList[0].Input, dataList[0].Ans)
+	fmt.Printf("%v\n", dataList)
 }
 
 func TestGetSample(t *testing.T) {

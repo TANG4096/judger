@@ -26,6 +26,7 @@ type JudgeServiceServer struct {
 func (ju *JudgeServiceServer) Judge(ctx context.Context, req *pb.JudgeRequest) (res *pb.JudgeResponse, err error) {
 	dir := util.GetPath()
 	fileName := fmt.Sprintf("%d_%d_%d", req.ProblemID, req.UserID, time.Now().Unix())
+	t1 := time.Now()
 	err = Compile(ctx, req.SourceCode, req.Type, dir, fileName)
 	if err != nil {
 		if err.Error() == "compile error" {
@@ -36,7 +37,10 @@ func (ju *JudgeServiceServer) Judge(ctx context.Context, req *pb.JudgeRequest) (
 			return nil, err
 		}
 	}
+	CompileTime := time.Since(t1)
 	log.Infof("%s compile complete", fileName)
+	fmt.Printf("编译用时：%v\n", CompileTime)
+	t1 = time.Now()
 	testDataList, err := GetTestDataList(uint(req.ProblemID), req.IsUpdate)
 	if err != nil {
 		util.LogErr(err)
@@ -48,6 +52,8 @@ func (ju *JudgeServiceServer) Judge(ctx context.Context, req *pb.JudgeRequest) (
 	if err != nil {
 		return nil, err
 	}
+	d := time.Since(t1)
+	fmt.Printf("拉取题目信息用时：%v\n", d)
 	result, err := Run(ctx, dir+"/temp_data/", fileName, testDataList, problemData.TimeLimit, problemData.MemoryLimit, problemData.JudgerID)
 	if err != nil {
 		return nil, err
@@ -64,7 +70,35 @@ func (ju *JudgeServiceServer) JudgeClientAndServerStream(ctx context.Context, re
 func GetTestDataList(problemID uint, isUpdate bool) (testData []model.ProblemTestData, err error) {
 	cache := cache.GetTestDataCache()
 	testData = cache.Get(problemID)
-	if isUpdate || len(testData) == 0 {
+	path := util.GetPath()
+	if len(testData) == 0 {
+		t := 1
+		for {
+			//fmt.Println(t)
+			filePath := fmt.Sprintf("%s/temp_data/test_case/%d/", path, int(problemID))
+			inputFileName := fmt.Sprintf("%s%d.in", filePath, t)
+			outputFileName := fmt.Sprintf("%s%d.ans", filePath, t)
+			data := model.ProblemTestData{ProblemID: problemID}
+			data.Input, err = ioutil.ReadFile(inputFileName)
+			if err != nil {
+				//fmt.Println(err)
+				break
+			}
+			data.Ans, err = ioutil.ReadFile(outputFileName)
+			if err != nil {
+				//fmt.Println(err)
+				break
+			}
+			//data.Input = crlf2lf(data.Input)
+			data.Ans = crlf2lf(data.Ans)
+			testData = append(testData, data)
+			t++
+		}
+	}
+	if len(testData) != 0 {
+		return testData, nil
+	}
+	if isUpdate {
 		testData, err = model.GetTestDataList(problemID)
 		if err != nil {
 			return nil, err
@@ -89,6 +123,7 @@ func Compile(ctx context.Context, codeText []byte, Type, path, fileName string) 
 		compilerNameMap := util.GetConfigMap("complierName")
 		//log.Println(compilerNameMap)
 		cmd := exec.Command(compilerNameMap[Type], "-o", fileName, fileName+suffix)
+		defer os.Remove(fileName + suffix)
 		out, err := cmd.CombinedOutput()
 		if err != nil {
 			if len(out) != 0 {
@@ -105,9 +140,11 @@ func Compile(ctx context.Context, codeText []byte, Type, path, fileName string) 
 
 func Run(ctx context.Context, dir, fileName string, testDataList []model.ProblemTestData, TimeLimit, MemoryLimit, judgerID uint) (res *string, err error) {
 	var ans string
-	fmt.Println(testDataList)
+	//fmt.Println(testDataList)
+
+	defer os.Remove(dir + fileName)
 	for caseID, testData := range testDataList {
-		fmt.Println("test case: ", caseID)
+		fmt.Println("test case: ", caseID+1)
 		outFile, err := ioutil.TempFile(dir, "out")
 		if err != nil {
 			return nil, err
@@ -127,21 +164,22 @@ func Run(ctx context.Context, dir, fileName string, testDataList []model.Problem
 			defer outFile.Close()
 			err := syscall.Setrlimit(syscall.RLIMIT_CPU, &syscall.Rlimit{Cur: uint64(TimeLimit), Max: uint64(TimeLimit)})
 			if err != nil {
-				return nil, err
+				os.Exit(int(syscall.SIGUSR1))
 			}
 			err = syscall.Setrlimit(syscall.RLIMIT_AS, &syscall.Rlimit{Cur: uint64(MemoryLimit), Max: uint64(MemoryLimit)})
 			if err != nil {
-				return nil, err
+				os.Exit(int(syscall.SIGUSR1))
 			}
 			err = syscall.Setrlimit(syscall.RLIMIT_DATA, &syscall.Rlimit{Cur: uint64(MemoryLimit), Max: uint64(MemoryLimit)})
 			if err != nil {
-				return nil, err
+				os.Exit(int(syscall.SIGUSR1))
 			}
 			cmd.Start()
 			n, err := inWriter.Write(testData.Input)
 			fmt.Printf("write %d bytes to stdInput\n", n)
 			if err != nil {
-				return nil, err
+				fmt.Println(err)
+				os.Exit(int(syscall.SIGUSR1))
 			}
 			err = cmd.Wait()
 			if err != nil {
@@ -155,7 +193,7 @@ func Run(ctx context.Context, dir, fileName string, testDataList []model.Problem
 						os.Exit(int(syscall.SIGUSR1))
 					}
 				} else {
-					return nil, err
+					os.Exit(int(syscall.SIGUSR1))
 				}
 			}
 			os.Exit(0)
@@ -168,7 +206,8 @@ func Run(ctx context.Context, dir, fileName string, testDataList []model.Problem
 			if err != nil {
 				return nil, err
 			}
-
+			runTime := ps.SystemTime() + ps.UserTime()
+			fmt.Printf("运行用时：%v\n", runTime)
 			code := syscall.Signal(ps.ExitCode())
 			if code != 0 {
 				log.Infof("code: %d\n", ps.ExitCode())
@@ -183,32 +222,59 @@ func Run(ctx context.Context, dir, fileName string, testDataList []model.Problem
 				}
 				return &ans, nil
 			} else {
-				fmt.Println(judgerID)
+				t1 := time.Now()
+				fmt.Println("judgeID: ", judgerID)
+				stat, err := outFile.Stat()
+				if err != nil {
+					return nil, err
+				}
+				log.Infof("outfile size: %d", stat.Size())
+				out, err := ioutil.ReadFile(outFile.Name())
+				if err != nil {
+					return nil, err
+				}
+				log.Infof("Problem %d case %d output %d bytes", testData.ProblemID, caseID+1, len(out))
+				//fmt.Printf("out:\n%v", out)
+				//fmt.Printf("ans:\n%v", testData.Ans)
+
 				if judgerID == 0 {
-					stat, err := outFile.Stat()
-					if err != nil {
-						return nil, err
-					}
-					log.Infof("outfile size: %d", stat.Size())
-					out, err := ioutil.ReadFile(outFile.Name())
-					if err != nil {
-						return nil, err
-					}
-					log.Infof("Problem %d case %d output %d bytes", testData.ProblemID, caseID+1, len(out))
-					fmt.Println("out: ", out)
-					fmt.Println("ans: ", testData.Ans)
 					if !bytes.Equal(out, testData.Ans) {
 						ans = "Wrong Answer"
 						return &ans, nil
 					}
 				} else {
-
-					//TODO special judger
+					if !SpecialJudge(judgerID, out, testData.Ans) {
+						ans = "Wrong Answer"
+						return &ans, nil
+					}
 				}
+				CompareTime := time.Since(t1)
+				fmt.Printf("结果比较用时：%v\n", CompareTime)
 			}
 			os.Remove(outFile.Name())
 		}
 	}
-	ans = "accept"
+	ans = "Accept"
 	return &ans, nil
+}
+
+func crlf2lf(s []byte) []byte {
+	cnt := 0
+	book := make([]bool, len(s))
+	for k, v := range s {
+		if v == 13 {
+			book[k] = true
+			cnt++
+		} else {
+			if cnt != 0 {
+				s[k-cnt] = v
+			}
+
+		}
+	}
+	return s[:len(s)-cnt]
+}
+
+func SpecialJudge(SpecialJudgeID uint, out, ans []byte) bool {
+	return true
 }

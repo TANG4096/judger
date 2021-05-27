@@ -18,7 +18,7 @@ func TestJudge(t *testing.T) {
 	server := impl.JudgeServiceServer{}
 	req := &pb.JudgeRequest{
 		ProblemID: 3,
-		Type:      "c++",
+		Type:      "C++",
 		IsUpdate:  false,
 	}
 	path := util.GetPath() + "/temp_data/test/"
@@ -80,10 +80,11 @@ func TestRun(t *testing.T) {
 }
 
 func TestGetTestDataList(t *testing.T) {
-	list, err := impl.GetTestDataList(3, false)
+	list, err := impl.GetTestDataList(4, false)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+	fmt.Println(len(list))
 	fmt.Println(list)
 }

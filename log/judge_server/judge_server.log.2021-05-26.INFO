@@ -1,0 +1,223 @@
+judger 2021-05-26 17:22:36 [INFO] /ty/go/judger/util/http.go:23 ==> {"username":"test","password":"e10adc3949ba59abbe56e057f20f883e"}
+judger 2021-05-26 17:22:36 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.376506ms |    117.32.216.1 | POST | /login |
+judger 2021-05-26 17:22:40 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      104.16µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 17:22:40 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.196566ms |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 17:29:57 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |         109ns |      71.6.232.4 | GET | / |
+judger 2021-05-26 18:05:22 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |         110ns |    185.53.90.19 | GET | / |
+judger 2021-05-26 18:27:09 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |         108ns |    185.53.90.19 | GET | / |
+judger 2021-05-26 18:39:02 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          88ns |    47.103.4.164 | GET | / |
+judger 2021-05-26 18:39:06 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          85ns | 202.131.244.202 | GET | / |
+judger 2021-05-26 19:39:15 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          88ns | 101.132.109.128 | GET | / |
+judger 2021-05-26 19:43:09 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          88ns |  170.130.187.14 | GET | / |
+judger 2021-05-26 19:54:21 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |   18.521848ms |    117.32.216.1 | GET | /problemdata/?limit=20&offset=0&search= |
+judger 2021-05-26 19:54:53 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.532892ms |    117.32.216.1 | GET | /problemdata/?limit=20&offset=0&search= |
+judger 2021-05-26 19:55:50 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.109795ms |    117.32.216.1 | GET | /problemdata/?limit=20&offset=0&search= |
+judger 2021-05-26 19:55:57 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |       78.67µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 19:56:03 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     1.09334ms |    117.32.216.1 | GET | /problemdata/?limit=20&offset=0&search= |
+judger 2021-05-26 19:56:24 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |       79.62µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:00:26 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      61.242µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:02:31 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      45.358µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:02:41 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.422574ms |    117.32.216.1 | GET | /problemdata/?limit=20&offset=0&search= |
+judger 2021-05-26 20:05:57 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |  159.474002ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:06:01 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     104.723µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:06:05 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    3.667054ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:09:59 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     106.607µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:10:05 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.482735ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:10:57 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.330878ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:12:06 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    4.554629ms |    117.32.216.1 | GET | /problem/?id=undefined |
+judger 2021-05-26 20:13:12 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.259902ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:16:38 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |         138ns |   190.94.136.22 | GET | / |
+judger 2021-05-26 20:16:38 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          99ns |   190.94.136.22 | GET | / |
+judger 2021-05-26 20:25:23 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |   47.394596ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:26:50 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     1.68315ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:26:54 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.081841ms |    117.32.216.1 | GET | /problem/?id=undefined |
+judger 2021-05-26 20:29:07 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     110.277µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:29:09 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.253667ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:30:12 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     777.936µs |    117.32.216.1 | GET | /problem/?id=undefined |
+judger 2021-05-26 20:38:42 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.474538ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:40:13 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      767.49µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-26 20:40:17 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.879504ms |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:40:24 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.257708ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:40:40 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     800.107µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-26 20:43:43 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      45.413µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 20:43:45 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     1.32683ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 20:43:57 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     757.374µs |    117.32.216.1 | GET | /problem/?id=1 |
+judger 2021-05-26 20:45:35 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          88ns |    117.32.216.1 | POST | /addcontest/ |
+judger 2021-05-26 20:49:05 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     4.86414ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:10:01 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-26T12:49:29.769Z","2021-05-27T12:49:29.000Z"],"begintime":"2021-05-26 20:49:29","lasttime":"2021-05-27 20:49:29","type":"ACM","auth":0,"iprange":"None","classes":"All"}
+judger 2021-05-26 21:11:54 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-26T12:49:29.769Z","2021-05-27T12:49:29.000Z"],"begintime":"2021-05-26 20:49:29","lasttime":"2021-05-27 20:49:29","type":"ACM","auth":0,"iprange":"None","classes":"All"}
+judger 2021-05-26 21:12:40 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-26T12:49:29.769Z","2021-05-27T12:49:29.000Z"],"begintime":"2021-05-26 20:49:29","lasttime":"2021-05-27 20:49:29","type":"ACM","auth":0,"iprange":"None","classes":"All"}
+judger 2021-05-26 21:14:45 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |   68.674176ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:15:07 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-26T13:14:45.422Z","2021-05-26T13:14:45.422Z"],"begintime":"2021-05-26T13:14:45.422Z","lasttime":"2021-05-26T13:14:45.422Z","type":"ACM","auth":1,"iprange":"None","classes":"All"}
+judger 2021-05-26 21:15:07 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     407.423µs |    117.32.216.1 | POST | /addcontest/ |
+judger 2021-05-26 21:15:15 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.038969ms |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 21:15:27 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     1.27266ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:15:43 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     756.338µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 21:15:47 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      59.327µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 21:15:47 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     681.712µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 21:19:30 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    2.011036ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:19:54 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-26T13:19:29.632Z","2021-05-27T13:19:29.000Z"],"begintime":"2021-05-26 21:19:29","lasttime":"2021-05-27 21:19:29","type":"ACM","auth":1,"iprange":"None","classes":"All"}
+judger 2021-05-26 21:20:31 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     1.27017ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:20:34 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     127.439µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 21:20:37 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.246081ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:22:47 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.447164ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:23:29 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |      46.687µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 21:23:30 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.313936ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:24:10 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.378884ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:24:22 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-26T13:24:09.998Z","2021-05-27T13:24:09.000Z"],"begintime":"2021-05-26 21:24:09","lasttime":"2021-05-27 21:24:09","type":"ACM","auth":"1","iprange":"None","classes":"All"}
+judger 2021-05-26 21:24:22 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |   17.204181ms |    117.32.216.1 | POST | /addcontest/ |
+judger 2021-05-26 21:28:47 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.832948ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:29:22 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-27T04:00:00.000Z","2021-05-27T09:00:00.000Z"],"begintime":"2021-05-27 12:00:00","lasttime":"2021-05-27 17:00:00","type":"ACM","auth":"0","iprange":"None","classes":"All"}
+judger 2021-05-26 21:29:22 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.425083ms |    117.32.216.1 | POST | /addcontest/ |
+judger 2021-05-26 21:32:15 [INFO] /ty/go/judger/util/http.go:23 ==> {"creator":"123","title":"新比赛","level":3,"des":"无","note":"无","timerange":["2021-05-27T04:00:00.000Z","2021-05-27T09:00:00.000Z"],"begintime":"2021-05-27 12:00:00","lasttime":"2021-05-27 17:00:00","type":"ACM","auth":"0","iprange":"None","classes":"All"}
+judger 2021-05-26 21:32:15 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |   16.292065ms |    117.32.216.1 | POST | /addcontest/ |
+judger 2021-05-26 21:36:37 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          99ns |   182.16.105.34 | GET | /phpmyadmin/index.php |
+judger 2021-05-26 21:36:37 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          93ns |   182.16.105.34 | GET | /pmd/index.php |
+judger 2021-05-26 21:36:37 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 404 |          95ns |   182.16.105.34 | GET | /pmd/index.php |
+judger 2021-05-26 21:41:18 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.486516ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:41:27 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |     879.768µs |    117.32.216.1 | GET | /problem/?id=3 |
+judger 2021-05-26 21:44:02 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.348652ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:45:17 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.382956ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:48:37 [INFO] /ty/go/judger/web_server/main.go:57 ==> | 200 |    1.405981ms |    117.32.216.1 | GET | /problemdata/?limit=20&auth=3&offset=0&search= |
+judger 2021-05-26 21:58:37 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      181.46µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 21:58:37 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |    9.274662ms |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 21:58:44 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |    1.109654ms |    117.32.216.1 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=0 |
+judger 2021-05-26 21:58:47 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     752.643µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 21:58:49 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      1.0479ms |    117.32.216.1 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=0 |
+judger 2021-05-26 21:59:11 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     854.075µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 21:59:38 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |    1.054418ms |    117.32.216.1 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=0 |
+judger 2021-05-26 21:59:39 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |    1.280887ms |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:02:54 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     816.548µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:05:43 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      838.74µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:07:40 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     790.013µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:10:33 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     774.853µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:10:42 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      66.124µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:10:43 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     706.327µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:11:58 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      43.042µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:11:58 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     742.516µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:14:03 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     788.257µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:14:09 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      49.444µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:14:10 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     735.196µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:17:32 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     736.385µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:17:35 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      40.174µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:17:36 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     778.546µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:18:10 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      42.684µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:18:10 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     872.599µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:18:38 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     692.695µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:19:11 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     717.961µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:19:28 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |      45.108µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:19:29 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     728.319µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:22:21 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     731.551µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:24:49 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     750.616µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:25:48 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |     725.483µs |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:26:15 [INFO] /ty/go/judger/web_server/main.go:58 ==> | 200 |    1.442957ms |    117.32.216.1 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=0 |
+judger 2021-05-26 22:40:19 [INFO] /ty/go/judger/web_server/main.go:59 ==> | 200 |     156.456µs |    117.32.216.1 | GET | /settingboard/ |
+judger 2021-05-26 22:40:23 [INFO] /ty/go/judger/web_server/main.go:59 ==> | 200 |    1.160166ms |    117.32.216.1 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 22:40:25 [INFO] /ty/go/judger/web_server/main.go:59 ==> | 200 |    1.422634ms |    117.32.216.1 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:02:20 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |    1.332167ms |    117.32.216.1 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:02:20 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |    1.303999ms |    117.32.216.1 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:02:20 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      72.527µs |    117.32.216.1 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:02:20 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      85.895µs |    117.32.216.1 | GET | /currenttime/ |
+judger 2021-05-26 23:18:01 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      96.052µs |   223.104.11.30 | GET | /settingboard/ |
+judger 2021-05-26 23:18:02 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     1.16488ms |   223.104.11.30 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:18:02 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      36.289µs |   223.104.11.30 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:18:02 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |    2.283852ms |   223.104.11.30 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:18:03 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      58.519µs |   223.104.11.30 | GET | /currenttime/ |
+judger 2021-05-26 23:22:47 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     344.834µs |   117.32.216.93 | GET | /settingboard/ |
+judger 2021-05-26 23:22:48 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      72.737µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:22:48 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |   80.756374ms |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:22:48 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |   49.318558ms |   117.32.216.93 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:22:48 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      57.916µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:25:29 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |   42.553063ms |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:25:29 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     125.351µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:25:33 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      61.875µs |   117.32.216.93 | GET | /settingboard/ |
+judger 2021-05-26 23:25:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     805.652µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:25:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      79.307µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:25:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |    2.746148ms |   117.32.216.93 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:25:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     974.918µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:25:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      62.618µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:25:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      50.855µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:30:34 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      69.153µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:31:18 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     881.443µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:31:18 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      53.358µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:32:43 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     772.325µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:32:43 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      49.921µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:32:54 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     812.859µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:32:54 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      67.327µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:32:56 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      63.359µs |   117.32.216.93 | GET | /settingboard/ |
+judger 2021-05-26 23:32:58 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     854.463µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:32:58 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |       36.94µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:32:58 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |    2.563073ms |   117.32.216.93 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:32:58 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     835.916µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:32:58 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      31.477µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:32:58 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      66.442µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:36:06 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |     808.745µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:36:06 [INFO] /ty/go/judger/web_server/main.go:61 ==> | 200 |      51.119µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:43:25 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     159.538µs |   117.32.216.93 | GET | /settingboard/ |
+judger 2021-05-26 23:43:25 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      84.349µs |   117.32.216.93 | GET | /problemtag/ |
+judger 2021-05-26 23:43:25 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    2.789321ms |   117.32.216.93 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-26 23:43:31 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.672949ms |   117.32.216.93 | GET | /problem/?id=3 |
+judger 2021-05-26 23:43:31 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    3.206765ms |   117.32.216.93 | GET | /judgestatuslist/?uid=undefined&problemID=false&contest=undefined |
+judger 2021-05-26 23:43:31 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    5.495108ms |   117.32.216.93 | GET | /sample/?id=3 |
+judger 2021-05-26 23:43:31 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    2.215475ms |   117.32.216.93 | GET | /judgestatuslist/?uid=1&problemID=3&contest= |
+judger 2021-05-26 23:43:39 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     821.323µs |   117.32.216.93 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 23:43:42 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      967.84µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:43:42 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.245129ms |   117.32.216.93 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:43:42 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      65.644µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:43:42 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     763.895µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:43:42 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      52.723µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:43:42 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      49.128µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:43:56 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      54.717µs |   117.32.216.93 | GET | /problemtag/ |
+judger 2021-05-26 23:43:56 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    2.186611ms |   117.32.216.93 | GET | /problemdata/?limit=15&offset=0&auth=1&oj=STAOJ |
+judger 2021-05-26 23:44:00 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.014265ms |   117.32.216.93 | GET | /judgestatuslist/?uid=undefined&problemID=false&contest=undefined |
+judger 2021-05-26 23:44:00 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    2.204274ms |   117.32.216.93 | GET | /problem/?id=3 |
+judger 2021-05-26 23:44:00 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.096425ms |   117.32.216.93 | GET | /judgestatuslist/?uid=1&problemID=3&contest= |
+judger 2021-05-26 23:44:00 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.539505ms |   117.32.216.93 | GET | /sample/?id=3 |
+judger 2021-05-26 23:44:26 [INFO] /ty/go/judger/impl/judge_service_impl.go:41 ==> 3_1_1622043865 compile complete
+judger 2021-05-26 23:44:25 [INFO] /ty/go/judger/util/http.go:23 ==> {"user":"test","uid":"1","problemID":"3","result":-1,"time":0,"memory":0,"length":284,"language":"C++","submittime":"1622043864521","judger":"waiting for judger","contest":0,"code":"#include<iostream>\n\nusing namespace std;\n\nint main(void){\n    int a, b;\n    int n;\n    int cnt = 1;\n    cin >> n;\n    for (int i = 1 ; i <= 1000000 ;i++){\n        cnt = cnt + 1;\n    }\n    while (n--)\n    {\n        cin >> a >> b;\n        cout << a+b << endl;\n    }\n   \n    return 0;\n}\n","testcase":0,"rating":null}
+judger 2021-05-26 23:44:25 [INFO] /ty/go/judger/task/submit_task.go:74 ==> add submittask uid: 1 problemID 3
+
+judger 2021-05-26 23:44:25 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |   10.094878ms |   117.32.216.93 | POST | /submit/ |
+judger 2021-05-26 23:44:25 [INFO] /ty/go/judger/task/submit_task.go:51 ==> submit 3_1_1622043864521 is run
+judger 2021-05-26 23:44:25 [INFO] /ty/go/judger/service/problem_service.go:28 ==> rpc client created
+judger 2021-05-26 23:44:25 [INFO] /ty/go/judger/service/problem_service.go:29 ==> uid: 1 code:#include<iostream>
+
+using namespace std;
+
+int main(void){
+    int a, b;
+    int n;
+    int cnt = 1;
+    cin >> n;
+    for (int i = 1 ; i <= 1000000 ;i++){
+        cnt = cnt + 1;
+    }
+    while (n--)
+    {
+        cin >> a >> b;
+        cout << a+b << endl;
+    }
+   
+    return 0;
+}
+
+judger 2021-05-26 23:44:26 [INFO] /ty/go/judger/service/problem_service.go:35 ==> result:Accept
+
+judger 2021-05-26 23:44:26 [INFO] /ty/go/judger/cache/Judge_result_cache.go:32 ==> JudgeResultCache update k: 3_1_1622043864521 v: &{{%!s(uint=0) 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC {0001-01-01 00:00:00 +0000 UTC %!s(bool=false)}} 3_1_1622043864521 %!s(int=1)  %!s(int=3) Accept C++ %!s(int=0)}
+judger 2021-05-26 23:44:28 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      57.884µs |   117.32.216.93 | GET | /judgestatus/?id=3_1_1622043864521 |
+judger 2021-05-26 23:44:28 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     948.666µs |   117.32.216.93 | GET | /judgestatuslist/?uid=1&problemID=3&contest= |
+judger 2021-05-26 23:44:30 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     933.712µs |   117.32.216.93 | GET | /judgestatuscode/?id=3_1_1622043864521 |
+judger 2021-05-26 23:44:35 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      69.673µs |   117.32.216.93 | GET | /settingboard/ |
+judger 2021-05-26 23:44:35 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     865.345µs |   117.32.216.93 | GET | /judgestatuslist/?uid=undefined&problemID=false&contest=undefined |
+judger 2021-05-26 23:44:35 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    2.487284ms |   117.32.216.93 | GET | /problem/?id=3 |
+judger 2021-05-26 23:44:35 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.147471ms |   117.32.216.93 | GET | /judgestatuslist/?uid=1&problemID=3&contest= |
+judger 2021-05-26 23:44:35 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.583046ms |   117.32.216.93 | GET | /sample/?id=3 |
+judger 2021-05-26 23:45:05 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     712.622µs |   117.32.216.93 | GET | /contestlist/?limit=30&offset=0 |
+judger 2021-05-26 23:45:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     856.591µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:45:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      34.043µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:45:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |    1.991837ms |   117.32.216.93 | GET | /statusdatalist/?user=&limit=30&offset=0&problemtitle=&language=&result=&contest=1 |
+judger 2021-05-26 23:45:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |     777.655µs |   117.32.216.93 | GET | /contestinfo/?id=1 |
+judger 2021-05-26 23:45:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      57.605µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:45:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      59.272µs |   117.32.216.93 | GET | /currenttime/ |
+judger 2021-05-26 23:50:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      44.637µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |
+judger 2021-05-26 23:55:08 [INFO] /ty/go/judger/web_server/main.go:62 ==> | 200 |      55.172µs |   117.32.216.93 | GET | /contestannouncement/?contestid=1 |

@@ -55,7 +55,9 @@ func GetProblemList(limit, offset, auth int) ([]ProblemData, error) {
 
 func GetProblemData(id int) (*ProblemData, error) {
 	ans := ProblemData{}
-	err := db.GetDB().First(&ans).Error
+	temp := ProblemData{}
+	temp.ID = uint(id)
+	err := db.GetDB().Where(&temp).First(&ans).Error
 	if err != nil {
 		return nil, err
 	}
